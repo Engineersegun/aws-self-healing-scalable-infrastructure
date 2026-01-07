@@ -41,5 +41,19 @@ Scale-In: When CPU drops below 30%, extra instances are removed to prevent unnec
 🧪 Testing & Validation
 Failure Simulation: I manually terminated a running instance via the AWS Console.
 Result: The ASG detected the "Unhealthy" state within 60 seconds and provisioned a replacement instance without manual intervention.
-
 Load Testing: Used stress-testing tools to spike CPU usage.
+
+💡 Key Lessons Learned
+Infrastructure as Code: Realized the importance of Launch Templates for version control in infrastructure.
+Health Check Grace Periods: Learned to set an appropriate "warm-up" time so the system doesn't kill an instance before it finishes booting up.
+Cost Management: Balanced performance and cost by using "Target Tracking" policies.
+
+🛠️ How to Replicate This
+Clone this repository.
+Follow the detailed Documentation/Guide.md provided in the docs folder.
+Use the provided user-data.sh script to bootstrap your EC2 instances.
+
+👨‍💻 Connect with Me
+LinkedIn: kolade segun Adekunle 
+Portfolio: https://github.com/Engineersegun
+Email:koladesegun18@gmail.com
