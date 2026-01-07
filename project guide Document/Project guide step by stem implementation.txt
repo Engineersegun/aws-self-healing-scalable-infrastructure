@@ -1,41 +1,27 @@
 Steps to Implement Self-Healing Infrastructure with AWS Auto Scaling
 
 1.  Set Up an AWS EC2 Auto ScalingGroup
-
 ●             Launch an EC2 instance and configure it with the required application setup.
-
 ●             Create an AmazonMachine Image (AMI)of this instance for auto-scaling.
 
 2.  Create a Launch Templateor Launch Configuration
 
 ●             Go to the EC2 Dashboard → Auto Scaling → Launch Templates.
-
 ●             Create a launchtemplate using the previously createdAMI and define
 
 instance type, securitygroup, and key pair.
 
-
-
 3.  Configure an Auto ScalingGroup (ASG)
 
 ●             Go to Auto ScalingGroups and createa new group.
-
 ●             Attach the Launch Templateto the ASG.
-
 ●             Define the desirednumber of instances, minimum and maximumscaling
-
 limits.
-
 ●             Select the VPC and subnets forinstance deployment.
 
 4.  Configure ElasticLoad Balancer (ELB)(Optional but Recommended)
-
 ●             Go to EC2 Dashboard→ Load Balancers → Create Load Balancer.
-
-
-
 ●             Choose Application Load Balancer(ALB) and configurethe target group.
-
 ●             Attach the Auto Scaling Group to the Load Balancer.
 
 5.  Set Up Health Checksfor Self-Healing
@@ -44,58 +30,26 @@ limits.
 
 ●             Enable the Replace UnhealthyInstances option to automatically replace failed instances.
 
-
-
 6.  Configure Auto Scaling Policieswith CloudWatch Metrics
 
 ●             Navigate to Auto ScalingGroup → Scaling Policies.
 
 ●             Choose a scalingpolicy (e.g., Target Tracking, Step Scaling, or Scheduled
-
 Scaling).
-
 ●             Set up CloudWatch alarms to trigger scalingactions based on metrics like
-
-
 
 CPU utilization, network traffic, or request count.
 
 7.  Test the Self-Healing Mechanism
-
 ●             Manually terminate an instance in the Auto Scaling Group and observehow AWS automatically launches a replacement.
-
 ●             Stress test the application to see how Auto Scalingresponds to demand changes.
 
-
-
 8.  Monitor and Optimize Scaling
-
 ●             Use AWS CloudWatch to monitor performance and adjust scalingpolicies as needed.
-
 ●             Enable AWS Auto ScalingNotifications using Amazon SNS for alerts on
 
 scaling events.
 
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
 Conclusion
-
 This setup ensures that application instancesare automatically replacedif they fail, and resources scale dynamically based on demand. By
-
 leveraging Auto Scaling
