@@ -1,0 +1,35 @@
+#!/bin/bash
+# Update the system
+yum update -y
+
+# Install Apache Web Server
+yum install -y httpd
+
+# Start and enable Apache so it runs on boot
+systemctl start httpd
+systemctl enable httpd
+
+# Create a simple, professional landing page
+# It displays the Instance ID so you can prove the Load Balancer is working!
+INSTANCE_ID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
+
+cat <<EOF > /var/www/html/index.html
+<html>
+<head>
+    <title>Self-Healing Infrastructure</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        .box { border: 2px solid #232f3e; padding: 20px; display: inline-block; border-radius: 10px; }
+        h1 { color: #ff9900; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>System Status: Online</h1>
+        <p>This instance was automatically provisioned by <b>AWS Auto Scaling</b>.</p>
+        <p><b>Instance ID:</b> $INSTANCE_ID</p>
+        <p>Managed by Gemini Project 8 Portfolio</p>
+    </div>
+</body>
+</html>
+EOF
