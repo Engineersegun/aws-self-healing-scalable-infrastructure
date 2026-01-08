@@ -1,5 +1,6 @@
 # aws-self-healing-scalable-infrastructure
-<img width="1016" height="552" alt="aws-self-healing scalable" src="https://github.com/user-attachments/assets/63aed178-325c-42eb-9003-c97eac2bf6d1" />
+
+<img width="1199" height="669" alt="self-healing" src="https://github.com/user-attachments/assets/5cf15f5d-8f01-463b-8dee-a23853b8b6f0" />
 
 High Availability, Scalability, Cost-Optimization
 
