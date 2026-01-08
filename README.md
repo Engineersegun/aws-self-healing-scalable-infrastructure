@@ -1,8 +1,12 @@
 # aws-self-healing-scalable-infrastructure
-https://github.com/user-attachments/assets/020d7e11-11e9-4312-9484-10c75da945a8
-199" height="669" alt="self-healing" src="https://github.com/user-attachments/assets/5cf15f5d-8f01-463b-8dee-a23853b8b6f0" />
 
-High Availability, Scalability, Cost-Optimization
+https://github.com/user-attachments/assets/020d7e11-11e9-4312-9484-10c75da945a8
+
+
+High Availabi![WhatsApp Image 2026-01-08 at 9 09 59 AM](https://github.com/user-attachments/assets/29ff01a7-8f7e-4d99-a780-5b4debf53087)
+lity, Scalability, Cost-Optimization
+
+
 
 <img width="1366" height="768" alt="lunch" src="https://github.com/user-attachments/assets/90c9753a-be05-4bf9-8059-07196b344157" />
 <img width="1366" height="768" alt="png h" src="https://github.com/user-attachments/assets/d8ecfa27-f1df-4148-be3f-0115ac583440" />
